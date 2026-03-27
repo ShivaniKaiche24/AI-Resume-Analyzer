@@ -53,19 +53,19 @@ function App () {
             type="file"
             onChange={(e)=>{
                const file = e.target.files[0];
+
                if(!file) return;
 
                if(file.type !== "application/pdf"){
-                  setError("Only pdf files are allowed");
+                  setError("Upload only in pdf format ");
                   setResume(null);
                   setFileName("");
                   return;
                }
-
-               setError("");
-               setResume(file);
-               setFileName(file.name);
-               setDescription("");
+                setError("");
+                setResume(file);
+                setFileName(file.name);
+                setDescription("");
             }}
           />
       
