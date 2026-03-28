@@ -10,7 +10,19 @@ function App () {
     const[fileName,setFileName] =useState("");
 
 
-    const isReady = resume && description && !error;
+    const isReady = resume && description && nam !error;
+
+    const handleAnalyze=() =>{
+      const data = {
+         name,
+         description,
+         resume: resume?.name,
+         time:new Date().toLocaleTimeString()
+      };
+      console.log("Sendind data :",data)
+      alert("Data ready for backend");
+    }
+
 
     return (
     
@@ -98,6 +110,7 @@ function App () {
 
          <button
         disabled={!isReady}
+        onClick={handleAnalyze}
          style={{
             marginTop:"20px",
             padding:"12px",
