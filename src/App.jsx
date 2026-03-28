@@ -10,7 +10,7 @@ function App () {
     const[fileName,setFileName] =useState("");
 
 
-    const isReady = resume && description && nam !error;
+    const isReady = resume && description && name && !error;
 
     const handleAnalyze=() =>{
       const data = {
